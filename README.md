@@ -94,10 +94,10 @@ There are 8 states of the login screen:
 3. **Form** — display username & password form instead of identity provider buttons.
 4. **Button authenticating** — user clicked some button from state (3), and we wait to be redirected to the identity provider's login page (or to be authenticated automatically). This state replaces the clicked authenticator icon to `.login-icon-spinner` element, which can be styled. See `egi-datahub` for example implementation.
 5. **Form authenticating** — user submitted the username & password, either hitting enter on the input or clicking on the `Sign in` button. In this state, the submit button has a `.loading` class and an additional `.button-spinner` element.
-6. **Error** — there was an error when authenticating, and the error message is displayed instead of login buttons or form.
+6. **Error** — there was an error when authenticating, and the error message is displayed instead of login buttons or form. You can simulate the error view by adding `#error` to the URL, e.g. http://localhost:8080/ozw/onezone/index.html#error
 7. **Form error** — user entered invalid username and/or password. The `.has-error` class is added to inputs and small information about invalid credentials is displayed.
 8. **Final** — authentication succeeded and page is being redirected to the authenticated Onezone GUI.
 
 The below diagram shows possible state transitions:
 
-![Login view states](docs/states.png)
+![Login view states](docs/states.svg)

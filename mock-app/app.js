@@ -12,6 +12,9 @@ const FrontpageState = Object.freeze({
 const State = FrontpageState;
 
 class CustomFrontpageMock {
+  constructor() {
+    this.isErrorMockedLast = this.isAuthenticationErrorMocked();
+  }
   integrate() {
     const iframe = this.getCustomFrontpageIframeElement();
     iframe.addEventListener('load', () => this.onIframeLoad(iframe));
@@ -21,6 +24,14 @@ class CustomFrontpageMock {
   }
   onIframeLoad(iframe) {
     this.injectFrontpageIntegrationScript(iframe);
+    window.addEventListener('hashchange', () => {
+      if (this.isErrorMockedLast !== this.isAuthenticationErrorMocked()) {
+        window.location.reload();
+      }
+    });
+  }
+  isAuthenticationErrorMocked() {
+    return window.location.hash.includes('error');
   }
   injectFrontpageIntegrationScript(iframe) {
     iframe.contentWindow.customFrontpageModel = this.createMockModel();
@@ -38,9 +49,8 @@ class CustomFrontpageMock {
   createMockModel() {
     /** @type {FrontpageApi} */
     let localFrontpageApi;
-    // FIXME: obrazki lokalne
     const imagesOrigin = 'https://demo.onedata.org';
-    const isAuthenticationError = true;
+    const isAuthenticationError = this.isErrorMockedLast;
     return {
       data: {
         availableAuthenticators: [{
