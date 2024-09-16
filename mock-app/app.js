@@ -39,8 +39,8 @@ class CustomFrontpageMock {
     /** @type {FrontpageApi} */
     let localFrontpageApi;
     // FIXME: obrazki lokalne
-    const imagesOrigin = 'https://dev-onezone.default.svc.cluster.local';
-    const windowMock = window.mock ?? {};
+    const imagesOrigin = 'https://demo.onedata.org';
+    const isAuthenticationError = true;
     return {
       data: {
         availableAuthenticators: [{
@@ -65,10 +65,11 @@ class CustomFrontpageMock {
         loginMessage: 'Mollit fugiat laboris do qui esse culpa eiusmod nostrud occaecat tempor officia eu occaecat nostrud.<br>Irure id veniam velit sunt adipisicing reprehenderit irure esse ea qui eiusmod.',
         isAuthenticationError: false,
         privacyPolicyUrl: 'https://example.com/privacy-policy',
-        termsOfUseUrl:'https://example.com/terms-of-use',
+        termsOfUseUrl: 'https://example.com/terms-of-use',
         version: '21.02.6',
         sessionHasExpired: false,
         isDomainMismatch: false,
+        isAuthenticationError,
       },
       api: {
         registerFrontpageApi(frontpageApi) {
@@ -97,7 +98,15 @@ class CustomFrontpageMock {
           });
         },
         getAuthenticationError() {
-          return windowMock.authenticationError ?? null;
+          if (isAuthenticationError) {
+            return {
+              message: 'The Identity Provider of your choice seems to be temporarily unavailable, please try again later.',
+              refId: '12345678',
+              isContactInfo: true,
+            };
+          } else {
+            return null;
+          }
         },
       },
       i18n: {
@@ -124,4 +133,3 @@ class CustomFrontpageMock {
 function mockAppInit() {
   new CustomFrontpageMock().integrate();
 }
-
