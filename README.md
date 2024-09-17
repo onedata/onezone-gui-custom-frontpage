@@ -67,6 +67,14 @@ Open the above URL to see the mocked login page. All changes made in the `exampl
 
 When you are ready to deploy the front page, copy the template directory containing `index.html` to the `/var/www/html/oz_worker/custom/frontpage` location in the Onezone container (the location could not exist, so you should create it). Finally, you should have a `/var/www/html/oz_worker/custom/frontpage/index.html` file.
 
+If you are using one-env, you can use the following script to deploy (and overwrite) the front page on the Onezone container:
+
+```shell
+./deploy.sh [path_to_static_dir]
+```
+
+As in the `./run.sh` — it takes the `egi-datahub` front page by default.
+
 Refresh the Onezone GUI login page — you should see your own authentication page instead of built-in one. Test the typical scenarios and check the JS console to see if there are no errors.
 
 # Technical details
