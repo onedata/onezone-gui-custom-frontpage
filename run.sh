@@ -8,4 +8,8 @@
 # Starts development server for creating custom Onezone GUI authentication page.
 # See README.md for more information.
 
-docker run -it --rm -v `pwd`:/onedata-gui-custom-frontpage -p 8080:8080 --entrypoint="/onedata-gui-custom-frontpage/entrypoint.sh" onedata-gui-custom-frontpage:v1 $@
+REPO_PATH=/onezone-gui-custom-frontpage
+IMAGE_NAME=onedata/onezone-gui-custom-frontpage:v1
+PORT=8080
+
+docker run --network="host" -it --rm -v `pwd`:${REPO_PATH} --expose ${PORT} -p ${PORT}:${PORT} --entrypoint="${REPO_PATH}/entrypoint.sh" ${IMAGE_NAME} $@

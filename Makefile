@@ -1,5 +1,6 @@
-all:
-	docker build . -t onedata-gui-custom-frontpage:v1
+.PHONY: docker
 
-run:
-	./run.sh
+IMAGE_NAME=onedata/onezone-gui-custom-frontpage:v1
+
+docker:
+	docker build . -t ${IMAGE_NAME}

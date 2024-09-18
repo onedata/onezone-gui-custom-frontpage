@@ -56,12 +56,12 @@ To launch the `simple` template, invoke the following command from the root dire
 The docker container should start with the integration web app. When the docker starts, you should see the following message above the `http-server` status:
 
 ```
-+-----------------------------------------------------------------+
-| Open the mock app: http://localhost:8080/ozw/onezone/index.html |
-+-----------------------------------------------------------------+
+Open the mock app: http://localhost:8080/ozw/onezone/index.html"
 ```
 
 Open the above URL to see the mocked login page. All changes made in the `examples/template` files will be visible on full page refresh (you should use refresh with cache clear, typically using `ctrl + shift + r`).
+
+The page will display username & password authentication button and two additional identity providers. Clicking on username & password will open login form, while clicking on identity providers will cause them to be loading infinitely. You can also simulate error view by adding `#error` to the URL: <http://localhost:8080/ozw/onezone/index.html#error>.
 
 ## Installing the front page
 

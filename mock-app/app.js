@@ -11,6 +11,11 @@ const FrontpageState = Object.freeze({
 
 const State = FrontpageState;
 
+function noCacheUrl(url) {
+  const timestamp = new Date().getTime();
+  return `${url}?timestamp=${timestamp}`;
+}
+
 class CustomFrontpageMock {
   constructor() {
     this.isErrorMockedLast = this.isAuthenticationErrorMocked();
@@ -38,11 +43,11 @@ class CustomFrontpageMock {
     const iframeDocument = iframe.contentWindow.document;
     // Append integration script.
     const script = iframeDocument.createElement('script');
-    script.src = `../../assets/scripts/custom-frontpage-integration.js?nocache=1`;
+    script.src = noCacheUrl(`../../assets/scripts/custom-frontpage-integration.js`);
     const style = iframeDocument.createElement('link');
     style.rel = 'stylesheet';
     style.type = 'text/css';
-    style.href = '../../assets/styles/custom-frontpage.css';
+    style.href = noCacheUrl('../../assets/styles/custom-frontpage.css');
     iframeDocument.body.appendChild(script);
     iframeDocument.head.appendChild(style);
   }
@@ -77,8 +82,10 @@ class CustomFrontpageMock {
         privacyPolicyUrl: 'https://example.com/privacy-policy',
         termsOfUseUrl: 'https://example.com/terms-of-use',
         version: '21.02.6',
+        versionBuild: 'a1b2c3d4',
         sessionHasExpired: false,
         isDomainMismatch: false,
+        isTestMode: false,
         isAuthenticationError,
       },
       api: {
@@ -92,10 +99,7 @@ class CustomFrontpageMock {
             localFrontpageApi.setState(State.ButtonAuthenticating, {
               authenticatorName,
             });
-            await new Promise(resolve => {
-              setTimeout(resolve, 2000);
-            });
-            localFrontpageApi.setState(State.Buttons);
+            // will be in the loading state infinitely
           }
         },
         async usernameAuthenticate() {
@@ -121,6 +125,7 @@ class CustomFrontpageMock {
       },
       i18n: {
         signIn: 'Sign in',
+        signInUsing: 'Sign in using',
         withIdentityProvider: 'with your identity provider',
         usingUsername: 'using your username & password',
         username: 'Username',
@@ -133,8 +138,10 @@ class CustomFrontpageMock {
         privacyPolicyLabel: 'Privacy policy',
         termsOfUseLabel: 'Terms of use',
         versionLabel: 'version',
+        versionBuild: 'Build',
         sessionExpiredText: 'Your session has expired.',
         domainMismatchText: 'You have entered this page using a different domain (127.0.0.1) than the actual Onezone server domain (demo.onedata.org). Some of the content will be unavailable or malfunctioning, e.g. the file upload action. Use the server domain to ensure full functionality.',
+        signInTestMode: 'This is the test sign-in page — based on test.auth.config — used for sign-in simulation and diagnostics.',
       },
     };
   }
