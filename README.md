@@ -69,7 +69,7 @@ like this:
 ![](docs/egi-example-error.png)
 
 
-## Testing the front page
+## Testing toolkit
 
 Normally, the custom front page static files should be mounted into the Onezone container.
 The Onezone GUI interacts with the front page by controlling the events and injecting the
@@ -184,3 +184,10 @@ There are 8 states of the login screen:
 The below diagram shows possible state transitions:
 
 ![Login view states](docs/states.svg)
+
+# Security considerations
+
+Since the custom front page is served by Onezone and displayed in an iframe in the Onezone
+GUI, it makes it technically possible to run some malicious scripts from withing the front
+page source. That's why, as a Onezone admin, you should only use front page
+implementations coming from a trusted source.
