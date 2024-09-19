@@ -1,20 +1,24 @@
-# Custom authentication front page
+# Custom Onezone front page
 
-Onezone GUI of Onedata allows to set a custom authentication view using an HTML template. This repository includes examples of the templates, tutorial and toolkit for launching the HTML template in a mocked environment before applying it in real Onezone GUI.
+The Onezone component of Onedata can be configured to include a custom front page (i.e. login page). Implementation of a custom front page is based on an HTML template, as described further on. 
+
+This repository includes implementation examples, a tutorial and a toolkit for launching the front page preview in a mocked environment for convenient development and testing.
 
 # Development basics
 
-The front page template is simply an HTML page put in the designated directory with optional static files like images, with some special elements utilized by Onezone GUI to display an authentication view.
+The front page is essentially an HTML page put in the designated directory with optional static files like images, with some special elements utilized by Onezone GUI to display an authentication view.
 
 ## Front page structure
 
-The original, built-in Onezone GUI authentication view looks this way:
+The original, built-in Onezone GUI front page looks this way:
 
 ![Built-in Onezone authentication page](docs/original-buttons.png)
 
-We can designate some constant elements like headers, identity providers buttons, username & password form, etc.
+It contains structural elements like headers, identity providers buttons, username & password form, etc.
 
-These constant elements are styled by the template creator, but are populated with data and controlled by Onedata scripts. Technically, the template should have HTML elements with special IDs. We designate the following elements:
+A custom front page contains the same structural elements, but is styled by the implementer. The content of the elements is populated with data and controlled by Onedata scripts. 
+
+Every implementation must be based on an `index.html` file that contains HTML elements with special, predefined IDs:
 
 1. **Header** — a first-level header containing "Sign-in" or "Authentication error" text. A `h1` element with `sign-in-header` ID.
 2. **Sub-header** — second level header containing text like "with your identity provider" depending on view current context. A `h2` element with `sign-in-subheader` ID.
@@ -24,13 +28,13 @@ These constant elements are styled by the template creator, but are populated wi
 6. **Login message container** — a message defined by admin using Onezone cluster GUI settings. A `div` element with `login-message-container` ID.
 7. **Footer** — links for _Privacy policy_, _Terms of use_ (if available — can be set using Onezone cluster GUI settings) and Onezone version string. A `div` element with `footer` ID.
 
-Note, that all element should be present in the HTML file. Otherwise, the page would be malfunctioning.
+Note that all above elements must be present in the HTML file. Otherwise, the page will be malfunctioning.
 
 ## Examples
 
-You can see examples of these pages in the `examples/` directory. There is a production-grade example `egi-datahub` created for the [https://datahub.egi.eu](EGI Datahub) and a minimal `simple` template. The `simple` template would be a good point to start developing your own template, but the `egi-datahub` is a good reference for a complete, working front page.
+Consult the `examples/` directory. There is a production-grade example `egi-datahub` created for the [EGI Datahub](https://datahub.egi.eu) service and a minimal `simple` template. The `simple` template is a good starting point for your own front page, while the `egi-datahub` is a good reference for a complete implementation.
 
-The front page structure elements on the example EGI Datahub template look as follows:
+On the EGI Datahub front page, the structural elements (see the list above) are placed like this:
 
 ![](docs/egi-example-buttons.png)
 
@@ -39,35 +43,33 @@ The front page structure elements on the example EGI Datahub template look as fo
 ![](docs/egi-example-error.png)
 
 
-## Testing app
+## Testing the app
 
-Normally, the custom front page static files should be put in to the Onezone container. The template is processed by the Onezone GUI by controlling the events and injecting the necessary data.
+Normally, the custom front page static files should be mounted into the Onezone container. The Onezone GUI interacts with the front page by controlling the events and injecting the necessary data.
 
-To enable the preview for development before launching the template in the real Onezone, this repository contains an application for testing the created template pushing mock data.
+To enable the preview for development, this repository contains an application for testing the implementation, which works on mocked data (without an actual Onezone service running).
 
-You can simply run the `./run.sh` script with the optional relative path to the directory with the developed template. Note, that the template directory must be inside the repo directory. By default, the script setups the environment using `egi-datahub` template.
+To use it, run the `./run.sh` script with the optional relative path to the directory with the developed front page. Note that the directory must be inside this repo. By default, the script sets up the environment using the `egi-datahub` implementation.
 
 To launch the `simple` template, invoke the following command from the root directory of the repository:
 
 ```shell
-./run.sh examples/template
+./run.sh examples/simple
 ```
 
-The docker container should start with the integration web app. When the docker starts, you should see the following message above the `http-server` status:
+A docker container with the integration web app should start. When the docker starts, you should see the following message above the `http-server` status:
 
 ```
 Open the mock app: http://localhost:8080/ozw/onezone/index.html"
 ```
 
-Open the above URL to see the mocked login page. All changes made in the `examples/template` files will be visible on full page refresh (you should use refresh with cache clear, typically using `ctrl + shift + r`).
+Open the above URL to see the mocked login page. All changes made in the `examples/simple` files will be visible on full page refresh (you should use refresh with cache clear, typically using `ctrl + shift + r`).
 
-The page will display username & password authentication button and two additional identity providers. Clicking on username & password will open login form, while clicking on identity providers will cause them to be loading infinitely. You can also simulate error view by adding `#error` to the URL: <http://localhost:8080/ozw/onezone/index.html#error>.
+The page will display username & password authentication button and two additional identity providers. Clicking on username & password will open login form, while clicking on identity providers will cause them to be loading infinitely. You can also simulate the error view by adding `#error` to the URL: <http://localhost:8080/ozw/onezone/index.html#error>.
 
-## Installing the front page
+## Injecting into a development Onezone
 
-When you are ready to deploy the front page, copy the template directory containing `index.html` to the `/var/www/html/oz_worker/custom/frontpage` location in the Onezone container (the location could not exist, so you should create it). Finally, you should have a `/var/www/html/oz_worker/custom/frontpage/index.html` file.
-
-If you are using one-env, you can use the following script to deploy (and overwrite) the front page on the Onezone container:
+If you are using one-env, you can use the following script to deploy (and overwrite) the front page in the Onezone container:
 
 ```shell
 ./deploy.sh [path_to_static_dir]
@@ -75,11 +77,16 @@ If you are using one-env, you can use the following script to deploy (and overwr
 
 As in the `./run.sh` — it takes the `egi-datahub` front page by default.
 
-Refresh the Onezone GUI login page — you should see your own authentication page instead of built-in one. Test the typical scenarios and check the JS console to see if there are no errors.
+Refresh the Onezone GUI login page — you should see your own front page instead of the built-in one. Test the typical scenarios and check the JS console to see if there are no errors.
+
+# Installing the front page in production
+
+Mount the directory containing the `index.html` and other optional files/directories at `/var/www/html/oz_worker/custom/frontpage` in the Onezone container. 
+Finally, the `index.html` file should reside at `/var/www/html/oz_worker/custom/frontpage/index.html`, with other files/directories such as `style.css` beside it.
 
 # Technical details
 
-The custom front page is rendered in the iframe, which has data and API injected by the main Onezone GUI frame. The page is controlled using a script using a state machine, where states are representing e.g. "displaying buttons", "displaying username form" or "displaying error". Template creator does not need to know the technical details how the script work, because states change automatically due to events like identity provider box click.
+The custom front page is rendered in an iframe, which has data and API injected by the main Onezone GUI frame. The page is controlled by a script using a state machine, where states are representing e.g. "displaying buttons", "displaying username form" or "displaying error". The front page implementer does not need to know the technical details how the script works, because states change automatically due to events like an identity provider button click.
 
 ## Injected data and API
 
