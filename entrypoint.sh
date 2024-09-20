@@ -24,11 +24,8 @@ mkdir ${SITE_PATH}/ozw/onezone/assets
 cd ${SITE_PATH}/ozw/onezone/assets
 mkdir scripts
 mkdir styles
-# FIXME: get files from GitHub, remove unsafe -k flag
-# curl -kL "https://dev-onezone.default.svc.cluster.local/ozw/onezone/assets/scripts/custom-frontpage-integration.js" > scripts/custom-frontpage-integration.js
-# curl -kL "https://dev-onezone.default.svc.cluster.local/ozw/onezone/assets/styles/custom-frontpage.css" > styles/custom-frontpage.css
-curl -L "https://www.dropbox.com/scl/fi/1k3dzhvna7btldvpb0g4d/custom-frontpage-integration.js?rlkey=6l4gpwtk18l6udggk5euuhc3s&dl=0" > scripts/custom-frontpage-integration.js
-curl -L "https://www.dropbox.com/scl/fi/h97v10yyg293d1qbfh7kc/custom-frontpage.css?rlkey=xypg1ybx4ygpnh9yqzrndfta6&dl=0" > styles/custom-frontpage.css
+curl "https://raw.githubusercontent.com/onedata/onezone-gui/refs/heads/develop/src/app/scripts/custom-frontpage-integration.js" > scripts/custom-frontpage-integration.js
+curl "https://raw.githubusercontent.com/onedata/onezone-gui/refs/heads/develop/src/public/assets/styles/custom-frontpage.css" > styles/custom-frontpage.css
 
 
 # Mount custom frontpage for development
