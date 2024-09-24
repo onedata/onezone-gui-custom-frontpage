@@ -113,21 +113,50 @@ If you are using one-env, you can use the following script to deploy (and overwr
 front page in the Onezone container:
 
 ```shell
-./deploy.sh [path_to_static_dir]
+./deploy.sh [--test] [<path_to_static_dir>]
 ```
+
+Using the optional `--test` flag causes the front page to be deployed in the test mode
+login view, which can be accessed via `/ozw/onezone/i#/test/login` path.
 
 As in the `./run.sh` — it takes the `egi-datahub` front page by default.
 
 Refresh the Onezone GUI login page — you should see your own front page instead of the
-built-in one. Test the typical scenarios and check the JS console to see if there are no
-errors.
+built-in one (if you are not using the `--test` flag). Test the typical scenarios and
+check the JS console to see if there are no errors.
+
+## Uninstalling custom front page in a development Onezone
+
+You can delete static files injected using the `deploy.sh` script using a handy `clear-deployment.sh`:
+
+```shell
+./clear-deployment.sh [--test]
+```
+
+As mentioned before, the `--test` flag clears the test front page deployment.
+
 
 # Installing the front page in production
 
-Mount the directory containing the `index.html` and other optional files/directories at
-`/var/www/html/oz_worker/custom/frontpage` in the Onezone container. Finally, the
-`index.html` file should reside at `/var/www/html/oz_worker/custom/frontpage/index.html`,
-with other files/directories such as `style.css` beside it.
+Beside regular login view, Onezone GUI supports test mode login view, which can be
+accessed at the `/ozw/onezone/i#/test/login` path (e.g.
+https://demo.onedata.org/ozw/onezone/i#/test/login). This is a special view for testing
+the authentication methods and front page can be deployed to the test login view only,
+which does not change the main login view. This view uses
+`/etc/oz_worker/test.auth.config` file instead of regular `/etc/oz_worker/auth.config`.
+
+To check your front page in test mode, mount the directory containing the `index.html` and
+other optional files/directories at `/var/www/html/oz_worker/custom/frontpage-test` in the
+Onezone container. Finally, the `index.html` file should reside at
+`/var/www/html/oz_worker/custom/frontpage-test/index.html`, with other files/directories
+such as `style.css` beside it. Now you can access the
+`<your_domain>/ozw/onezone/i#/test/login` page and check if everything works as expected.
+
+When you are ready to deploy the front page to the main front page of Onezone GUI, mount
+the directory containing the `index.html` and other optional files/directories at
+`/var/www/html/oz_worker/custom/frontpage` (note the lack of `-test` suffix) in the
+Onezone container. Now you can access `<your_domain>/ozw/onezone/i` as non-authenticated
+user to see the custom front page.
 
 # Technical details
 
