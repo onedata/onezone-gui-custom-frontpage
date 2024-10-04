@@ -1,4 +1,10 @@
 #!/bin/sh
+# Author: Jakub Liput
+# Copyright (C) 2024 ACK CYFRONET AGH
+# This software is released under the MIT license cited in 'LICENSE.txt'
+
+# Launches webserver simulating Onezone server that allows to open the custom front-page
+# in its context.
 
 set -e
 

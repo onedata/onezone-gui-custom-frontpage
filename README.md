@@ -49,8 +49,8 @@ with special, predefined IDs:
    using Onezone cluster GUI settings) and Onezone version string. A `div` element with
    `footer` ID.
 
-Note that all above elements must be present in the HTML file. Otherwise, the page will be
-malfunctioning.
+Note that all the above elements must be present in the HTML file. Otherwise, the page
+will malfunction.
 
 ## Examples
 
