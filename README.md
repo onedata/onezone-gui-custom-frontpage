@@ -135,8 +135,7 @@ You can delete static files injected using the `deploy.sh` script using a handy 
 
 As mentioned before, the `--test` flag clears the test front page deployment.
 
-
-# Installing the front page in production
+# Testing the front page in production
 
 Beside regular login view, Onezone GUI supports test mode login view, which can be
 accessed at the `/ozw/onezone/i#/test/login` path (e.g.
@@ -151,6 +150,8 @@ Onezone container. Finally, the `index.html` file should reside at
 `/var/www/html/oz_worker/custom/frontpage-test/index.html`, with other files/directories
 such as `style.css` beside it. Now you can access the
 `<your_domain>/ozw/onezone/i#/test/login` page and check if everything works as expected.
+
+# Deploying the front page in production
 
 When you are ready to deploy the front page to the main front page of Onezone GUI, mount
 the directory containing the `index.html` and other optional files/directories at
