@@ -77,7 +77,7 @@ class CustomFrontpageMock {
             displayName: 'Google',
           },
         ],
-        loginMessage: 'Mollit fugiat laboris do qui esse culpa eiusmod nostrud occaecat tempor officia eu occaecat nostrud.<br>Irure id veniam velit sunt adipisicing reprehenderit irure esse ea qui eiusmod.',
+        loginMessage: '<p>Mollit fugiat laboris do qui esse culpa eiusmod nostrud occaecat tempor officia eu occaecat nostrud.</p><p>Irure id veniam velit sunt adipisicing reprehenderit irure esse ea qui eiusmod.</p>',
         isAuthenticationError: false,
         privacyPolicyUrl: 'https://example.com/privacy-policy',
         termsOfUseUrl: 'https://example.com/terms-of-use',
