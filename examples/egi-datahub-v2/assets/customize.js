@@ -32,10 +32,11 @@ function customizeEgiFrontpage() {
   // force auth button images matching to their colors
   /** @type {HTMLElement} */
   const egiIcon = egiButton.querySelector('.auth-icon-image');
-  egiIcon.style.backgroundImage = 'url(./assets/egi-logo-white.svg)';
+  egiIcon.style.backgroundImage = 'url(./assets/egi-logo-white.svg?rev=1733387933368)';
   /** @type {HTMLElement} */
   const basicAuthIcon = basicAuthButton.querySelector('.auth-icon-image');
-  basicAuthIcon.style.backgroundImage = 'url(./assets/basicauth-orange.svg)';
+  basicAuthIcon.style.backgroundImage =
+    'url(./assets/basicauth-orange.svg?rev=1733387933368)';
   
   // remover tip and apply button labels
   for (const button of buttonsContainer.querySelectorAll('.login-icon-box')) {

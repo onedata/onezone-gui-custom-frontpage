@@ -298,7 +298,7 @@ button.loading .button-spinner {
 }
 
 .login-icon-spinner {
-  background-image: url('./assets/spinner.svg?rev=1');
+  background-image: url('./assets/spinner.svg?rev=1733387933368');
   width: calc(100% - 10px);
   height: calc(100% - 10px);
   background-position-y: center;
