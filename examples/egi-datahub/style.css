@@ -199,10 +199,15 @@ button.loading .button-spinner {
   overflow: auto;
 }
 
-.login-message-container br {
+.login-message-container p {
+  margin-top: 0;
   margin-bottom: 0.4em;
   display: block;
   content: " ";
+}
+
+.login-message-container p:last-child {
+  margin-bottom: 0;
 }
 
 .login-notification + .login-notification {
