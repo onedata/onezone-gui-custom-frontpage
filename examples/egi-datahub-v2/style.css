@@ -216,9 +216,6 @@ button.loading .button-spinner {
   content: " ";
 }
 
-/* FIXME: dobrze w full hd i wqhd i pomiędzy */
-/* FIXME: guziki mniejsze, naprawić mobilne */
-
 .login-message-container {
   max-width: 83vh;
   min-width: 320px;
