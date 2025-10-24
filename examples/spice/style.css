@@ -11,8 +11,6 @@ body {
   --color-feedback-warning: var(--spice-pantone-red);
   --color-feedback-error: var(--spice-pantone-red);
   --color-feedback-disabled: #E6E6E6;
-  --color-blue: #005FAA;
-  --color-orange: #EF8200;
   --color-dark-gray: #999999;
   --color-body: #002136;
   --secondary-font-size: 1.15em;
@@ -23,7 +21,7 @@ body {
   --body-padding-right: 190px;
 
   --footer-height: 110px;
-  --elements-border-radius: 20px;
+  --element-border-radius: 20px;
 
   background-color: #F0F0F0;
   background-image: url('./assets/spice-background-clean.jpg?rev=1');
@@ -108,7 +106,7 @@ h2 {
   max-width: 100%;
   height: var(--login-icon-size);
   max-height: var(--login-icon-size);
-  border-radius: var(--elements-border-radius);
+  border-radius: var(--element-border-radius);
   border: 0;
   padding: 0 20px;
   border-color: var(--spice-pantone-navy);
@@ -145,7 +143,7 @@ button {
   align-items: center;
   color: #fff;
   font-weight: 700;
-  border-radius: var(--elements-border-radius);
+  border-radius: var(--element-border-radius);
   border: 0;
   font-size: var(--secondary-font-size);
   height: var(--login-icon-size);
