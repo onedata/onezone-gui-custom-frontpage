@@ -64,6 +64,7 @@ class CustomFrontpageMock {
             iconBackgroundColor: '#4BD187',
             displayName: 'username & password',
           },
+          // Uncomment below to test the "eoscpl" template (also comment-out the google)
           {
             id: 'accessEoscPl',
             iconPath: `https://data.eosc.pl/ozw/onezone/custom/eoscpl.svg`,

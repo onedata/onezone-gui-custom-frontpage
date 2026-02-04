@@ -16,6 +16,7 @@ body {
   --color-light-gray: #cbcbcb;
   --color-dark-gray: #999999;
   --color-body: #FFFFFF;
+  --color-login-button: #000;
   --secondary-font-size: 1.15em;
 
   background-color: var(--color-eoscpl-teal);
@@ -332,6 +333,8 @@ button.loading .button-spinner {
   text-wrap: nowrap;
   overflow: hidden;
   padding-right: 20px;
+  color: var(--color-login-button);
+  border-color: var(--color-eoscpl-pink);
 }
 
 .eoscpl-frontpage .auth-icon-image {
