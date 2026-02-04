@@ -3,15 +3,16 @@
 }
 
 body {
-  --color-eoscpl-pink: #F39BB1;
-  --color-eoscpl-teal: #257B85;
+  --color-eoscpl-pink: hsl(345, 79%, 78%);
+  --color-eoscpl-teal: hsl(186, 56%, 33%);
+
+  --color-eoscpl-pink-light: hsl(345, 79%, 92%);
+  --color-eoscpl-pink-dark: hsl(345, 79%, 68%);
 
   --login-icon-size: 52px;
-  --color-feedback-warning: #FFC000;
-  --color-feedback-error: #FF000E;
+  --color-feedback-warning: var(--color-eoscpl-pink);
+  --color-feedback-error: var(--color-eoscpl-pink);
   --color-feedback-disabled: #E6E6E6;
-  --color-blue: #005FAA;
-  --color-orange: #EF8200;
   --color-light-gray: #cbcbcb;
   --color-dark-gray: #999999;
   --color-body: #FFFFFF;
@@ -54,7 +55,6 @@ body {
   width: 100%;
 }
 
-
 .body-part-container {
   padding-left: 190px;
   padding-right: 190px;
@@ -80,7 +80,6 @@ body {
   background-image: url('./assets/eosc-node-poland-logo.png?rev=1');
   background-position-y: center;
 }
-
 
 @media (max-width: 1366px) {
   .body-part-container {
@@ -255,7 +254,7 @@ button.loading .button-spinner {
 }
 
 .back-btn:hover {
-  background-color: hsl(345, 79%, 92%)
+  background-color: var(--color-eoscpl-pink-light);
 }
 
 .sign-in-btn {
@@ -265,8 +264,8 @@ button.loading .button-spinner {
 }
 
 .sign-in-btn:hover {
-  background-color: hsl(345, 79%, 68%);
-  border-color: hsl(345, 79%, 68%);
+  background-color: var(--color-eoscpl-pink-dark);
+  border-color: var(--color-eoscpl-pink-dark);
 }
 
 .login-form-button:disabled {
@@ -351,27 +350,12 @@ button.loading .button-spinner {
   overflow: hidden;
 }
 
-/* specific button styles, as the DOM structure makes it hard to get horizontal center */
-/* .eoscpl-frontpage .accessEoscPl .auth-icon-image {
-  padding-left: 94px;
-  background-position-x: 26px;
-}
-.eoscpl-frontpage .accessEoscPl .login-icon-spinner {
-  background-position-x: 30px;
-} */
-
 @media (max-width: 460px) {
   .eoscpl-frontpage .auth-icon-image {
-    font-size: 1.05em;
+    font-size: 1em;
     background-size: 44px;
-    background-position-x: 22px;
-    padding-left: 84px;
-  }
-  .eoscpl-frontpage .accessEoscPl .auth-icon-image {
-    padding-left: 84px;
-  }
-  .eoscpl-frontpage .basicAuth .auth-icon-image {
-    padding-left: 92px;
+    background-position-x: 20px;
+    padding-left: 78px;
   }
 }
 
