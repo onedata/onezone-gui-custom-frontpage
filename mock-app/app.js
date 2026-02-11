@@ -64,12 +64,13 @@ class CustomFrontpageMock {
             iconBackgroundColor: '#4BD187',
             displayName: 'username & password',
           },
-          {
-            id: 'egi',
-            iconPath: `${imagesOrigin}/ozw/onezone/assets/images/auth-providers/egi.svg`,
-            iconBackgroundColor: '#FFFFFF',
-            displayName: 'EGI',
-          },
+          // Uncomment below to test the "eoscpl" template (also comment-out the google)
+          // {
+          //   id: 'accessEoscPl',
+          //   iconPath: `https://data.eosc.pl/ozw/onezone/custom/eoscpl.svg`,
+          //   iconBackgroundColor: '#FFFFFF',
+          //   displayName: 'federated AAI',
+          // },
           {
             id: 'google',
             iconPath: `${imagesOrigin}/ozw/onezone/assets/images/auth-providers/google.svg`,
@@ -81,7 +82,7 @@ class CustomFrontpageMock {
         isAuthenticationError: false,
         privacyPolicyUrl: 'https://example.com/privacy-policy',
         termsOfUseUrl: 'https://example.com/terms-of-use',
-        version: '21.02.6',
+        version: '25.0',
         versionBuild: 'a1b2c3d4',
         sessionHasExpired: false,
         isDomainMismatch: false,
