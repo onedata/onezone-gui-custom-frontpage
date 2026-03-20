@@ -1,6 +1,5 @@
 :root {
   /* Colors */
-  --color-eosc-pacific-cyan: hsl(186 84% 35%);
   --color-eosc-pacific-cyan-h: 186;
   --color-eosc-pacific-cyan-s: 84%;
   --color-eosc-pacific-cyan-l: 35%;
@@ -23,9 +22,10 @@
 }
 
 .one-animated-logo {
-  --logo-size: 40px;
+  --logo-size: var(--onedata-logo-height);
 }
 
+.onedata-logo,
 .one-animated-logo .logo-container {
   background-image: url('./assets/eosc-top.png');
 }
@@ -44,10 +44,6 @@
 
 .one-animated-logo.opened .right {
   width: 0;
-}
-
-.onedata-logo {
-  background-image: url('./assets/eosc-top.png');
 }
 
 .onedata-logo .right {
