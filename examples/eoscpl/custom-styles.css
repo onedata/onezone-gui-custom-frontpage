@@ -4,17 +4,17 @@
   --color-eosc-pacific-cyan-s: 84%;
   --color-eosc-pacific-cyan-l: 35%;
 
-  --primary-sidebar-color-h: var(--color-eosc-pacific-cyan-h);
-  --primary-sidebar-color-s: var(--color-eosc-pacific-cyan-s);
-  --primary-sidebar-color-l: var(--color-eosc-pacific-cyan-l);
+  --sidebar-primary-color-h: var(--color-eosc-pacific-cyan-h);
+  --sidebar-primary-color-s: var(--color-eosc-pacific-cyan-s);
+  --sidebar-primary-color-l: var(--color-eosc-pacific-cyan-l);
 
-  --secondary-sidebar-color-h: var(--color-eosc-pacific-cyan-h);
-  --secondary-sidebar-color-s: var(--color-eosc-pacific-cyan-s);
-  --secondary-sidebar-color-l: var(--color-eosc-pacific-cyan-l);
+  --sidebar-secondary-color-h: var(--color-eosc-pacific-cyan-h);
+  --sidebar-secondary-color-s: var(--color-eosc-pacific-cyan-s);
+  --sidebar-secondary-color-l: var(--color-eosc-pacific-cyan-l);
 
-  --upload-sidebar-color-h: var(--color-eosc-pacific-cyan-h);
-  --upload-sidebar-color-s: var(--color-eosc-pacific-cyan-s);
-  --upload-sidebar-color-l: var(--color-eosc-pacific-cyan-l);
+  --sidebar-upload-color-h: var(--color-eosc-pacific-cyan-h);
+  --sidebar-upload-color-s: 65%;
+  --sidebar-upload-color-l: 55%;
 
   /* Logo */
   --onedata-logo-height: 40px;
