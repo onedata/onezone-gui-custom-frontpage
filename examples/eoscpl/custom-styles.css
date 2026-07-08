@@ -26,20 +26,20 @@
 
   /* Buttons */
   /* default colors */
-  --btn-default-color-h: var(--color-eosc-white-h);
-  --btn-default-color-s: var(--color-eosc-white-s);
-  --btn-default-color-l: var(--color-eosc-white-l);
-  --btn-default-color: hsl(var(--btn-default-color-h), var(--btn-default-color-s), var(--btn-default-color-l));
+  --btn-default-fg-h: var(--color-eosc-white-h);
+  --btn-default-fg-s: var(--color-eosc-white-s);
+  --btn-default-fg-l: var(--color-eosc-white-l);
+  --btn-default-fg: hsl(var(--btn-default-fg-h), var(--btn-default-fg-s), var(--btn-default-fg-l));
 
   --btn-default-bg-h: 186;
   --btn-default-bg-s: 56%;
   --btn-default-bg-l: 33%;
   --btn-default-bg: hsl(var(--btn-default-bg-h), var(--btn-default-bg-s), var(--btn-default-bg-l));
 
-  --btn-default-border-h: var(--btn-default-bg-h);
-  --btn-default-border-s: var(--btn-default-bg-s);
-  --btn-default-border-l: var(--btn-default-bg-l);
-  --btn-default-border: hsl(var(--btn-default-border-h), var(--btn-default-border-s), var(--btn-default-border-l));
+  --btn-default-border-color-h: var(--btn-default-bg-h);
+  --btn-default-border-color-s: var(--btn-default-bg-s);
+  --btn-default-border-color-l: var(--btn-default-bg-l);
+  --btn-default-border-color: hsl(var(--btn-default-border-color-h), var(--btn-default-border-color-s), var(--btn-default-border-color-l));
 
   /* secondary colors */
   --btn-secondary-color-h: var(--color-eosc-white-h);
@@ -52,90 +52,90 @@
   --btn-secondary-bg-l: 63%;
   --btn-secondary-bg: hsl(var(--btn-secondary-bg-h), var(--btn-secondary-bg-s), var(--btn-secondary-bg-l));
 
-  --btn-secondary-border-h: var(--btn-secondary-bg-h);
-  --btn-secondary-border-s: var(--btn-secondary-bg-s);
-  --btn-secondary-border-l: var(--btn-secondary-bg-l);
-  --btn-secondary-border: hsl(var(--btn-secondary-border-h), var(--btn-secondary-border-s), var(--btn-secondary-border-l));
+  --btn-secondary-border-color-h: var(--btn-secondary-bg-h);
+  --btn-secondary-border-color-s: var(--btn-secondary-bg-s);
+  --btn-secondary-border-color-l: var(--btn-secondary-bg-l);
+  --btn-secondary-border-color: hsl(var(--btn-secondary-border-color-h), var(--btn-secondary-border-color-s), var(--btn-secondary-border-color-l));
 
   /* primary colors */
-  --btn-primary-color-h: 186;
-  --btn-primary-color-s: 56%;
-  --btn-primary-color-l: 33%;
-  --btn-primary-color: hsl(var(--btn-primary-color-h), var(--btn-primary-color-s), var(--btn-primary-color-l));
+  --btn-primary-fg-h: 186;
+  --btn-primary-fg-s: 56%;
+  --btn-primary-fg-l: 33%;
+  --btn-primary-fg: hsl(var(--btn-primary-fg-h), var(--btn-primary-fg-s), var(--btn-primary-fg-l));
 
   --btn-primary-bg-h: var(--color-eosc-white-h);
   --btn-primary-bg-s: var(--color-eosc-white-s);
   --btn-primary-bg-l: var(--color-eosc-white-l);
   --btn-primary-bg: hsl(var(--btn-primary-bg-h), var(--btn-primary-bg-s), var(--btn-primary-bg-l));
 
-  --btn-primary-border-h: var(--btn-primary-color-h);
-  --btn-primary-border-s: var(--btn-primary-color-s);
-  --btn-primary-border-l: var(--btn-primary-color-l);
-  --btn-primary-border: hsl(var(--btn-primary-border-h), var(--btn-primary-border-s), var(--btn-primary-border-l));
+  --btn-primary-border-color-h: var(--btn-primary-fg-h);
+  --btn-primary-border-color-s: var(--btn-primary-fg-s);
+  --btn-primary-border-color-l: var(--btn-primary-fg-l);
+  --btn-primary-border-color: hsl(var(--btn-primary-border-color-h), var(--btn-primary-border-color-s), var(--btn-primary-border-color-l));
 
   /* success colors */
-  --btn-success-color-h: 133;
-  --btn-success-color-s: 100%;
-  --btn-success-color-l: 12%;
-  --btn-success-color: hsl(var(--btn-success-color-h), var(--btn-success-color-s), var(--btn-success-color-l));
+  --btn-success-fg-h: 133;
+  --btn-success-fg-s: 100%;
+  --btn-success-fg-l: 12%;
+  --btn-success-fg: hsl(var(--btn-success-fg-h), var(--btn-success-fg-s), var(--btn-success-fg-l));
 
   --btn-success-bg-h: 131;
   --btn-success-bg-s: 59%;
   --btn-success-bg-l: 82%;
   --btn-success-bg: hsl(var(--btn-success-bg-h), var(--btn-success-bg-s), var(--btn-success-bg-l));
 
-  --btn-success-border-h: 133;
-  --btn-success-border-s: 100%;
-  --btn-success-border-l: 82%;
-  --btn-success-border: hsl(var(--btn-success-border-h), var(--btn-success-border-s), var(--btn-success-border-l));
+  --btn-success-border-color-h: 133;
+  --btn-success-border-color-s: 100%;
+  --btn-success-border-color-l: 82%;
+  --btn-success-border-color: hsl(var(--btn-success-border-color-h), var(--btn-success-border-color-s), var(--btn-success-border-color-l));
 
   /* info colors */
-  --btn-info-color-h: 220;
-  --btn-info-color-s: 6%;
-  --btn-info-color-l: 10%;
-  --btn-info-color: hsl(var(--btn-info-color-h), var(--btn-info-color-s), var(--btn-info-color-l));
+  --btn-info-fg-h: 220;
+  --btn-info-fg-s: 6%;
+  --btn-info-fg-l: 10%;
+  --btn-info-fg: hsl(var(--btn-info-fg-h), var(--btn-info-fg-s), var(--btn-info-fg-l));
 
   --btn-info-bg-h: 240;
   --btn-info-bg-s: 3%;
   --btn-info-bg-l: 93%;
   --btn-info-bg: hsl(var(--btn-info-bg-h), var(--btn-info-bg-s), var(--btn-info-bg-l));
 
-  --btn-info-border-h: 207;
-  --btn-info-border-s: 5%;
-  --btn-info-border-l: 53%;
-  --btn-info-border: hsl(var(--btn-info-border-h), var(--btn-info-border-s), var(--btn-info-border-l));
+  --btn-info-border-color-h: 207;
+  --btn-info-border-color-s: 5%;
+  --btn-info-border-color-l: 53%;
+  --btn-info-border-color: hsl(var(--btn-info-border-color-h), var(--btn-info-border-color-s), var(--btn-info-border-color-l));
 
   /* warning colors */
-  --btn-warning-color-h: 220;
-  --btn-warning-color-s: 6%;
-  --btn-warning-color-l: 10%;
-  --btn-warning-color: hsl(var(--btn-warning-color-h), var(--btn-warning-color-s), var(--btn-warning-color-l));
+  --btn-warning-fg-h: 220;
+  --btn-warning-fg-s: 6%;
+  --btn-warning-fg-l: 10%;
+  --btn-warning-fg: hsl(var(--btn-warning-fg-h), var(--btn-warning-fg-s), var(--btn-warning-fg-l));
 
   --btn-warning-bg-h: 53;
   --btn-warning-bg-s: 75%;
   --btn-warning-bg-l: 95%;
   --btn-warning-bg: hsl(var(--btn-warning-bg-h), var(--btn-warning-bg-s), var(--btn-warning-bg-l));
 
-  --btn-warning-border-h: 51;
-  --btn-warning-border-s: 100%;
-  --btn-warning-border-l: 64%;
-  --btn-warning-border: hsl(var(--btn-warning-border-h), var(--btn-warning-border-s), var(--btn-warning-border-l));
+  --btn-warning-border-color-h: 51;
+  --btn-warning-border-color-s: 100%;
+  --btn-warning-border-color-l: 64%;
+  --btn-warning-border-color: hsl(var(--btn-warning-border-color-h), var(--btn-warning-border-color-s), var(--btn-warning-border-color-l));
 
   /* danger colors */
-  --btn-danger-color-h: 357;
-  --btn-danger-color-s: 89%;
-  --btn-danger-color-l: 40%;
-  --btn-danger-color: hsl(var(--btn-danger-color-h), var(--btn-danger-color-s), var(--btn-danger-color-l));
+  --btn-danger-fg-h: 357;
+  --btn-danger-fg-s: 89%;
+  --btn-danger-fg-l: 40%;
+  --btn-danger-fg: hsl(var(--btn-danger-fg-h), var(--btn-danger-fg-s), var(--btn-danger-fg-l));
 
   --btn-danger-bg-h: 356;
   --btn-danger-bg-s: 94%;
   --btn-danger-bg-l: 87%;
   --btn-danger-bg: hsl(var(--btn-danger-bg-h), var(--btn-danger-bg-s), var(--btn-danger-bg-l));
 
-  --btn-danger-border-h: 357;
-  --btn-danger-border-s: 89%;
-  --btn-danger-border-l: 40%;
-  --btn-danger-border: hsl(var(--btn-danger-border-h), var(--btn-danger-border-s), var(--btn-danger-border-l));
+  --btn-danger-border-color-h: 357;
+  --btn-danger-border-color-s: 89%;
+  --btn-danger-border-color-l: 40%;
+  --btn-danger-border-color: hsl(var(--btn-danger-border-color-h), var(--btn-danger-border-color-s), var(--btn-danger-border-color-l));
 
   /* hover, focus colors */
   --color-eosc-pacific-cyan-darker-h: var(--color-eosc-pacific-cyan-h);
@@ -172,6 +172,9 @@
   --color-eosc-coral-darker-s: 97%;
   --color-eosc-coral-darker-l: 76%;
   --color-eosc-coral-darker: hsl(var(--color-eosc-coral-darker-h), var(--color-eosc-coral-darker-s), var(--color-eosc-coral-darker-l));
+
+
+  --one-pill-button-border-width: 1px;
 }
 
 .one-animated-logo {
