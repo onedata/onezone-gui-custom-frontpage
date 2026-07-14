@@ -57,22 +57,6 @@
   --btn-default-border-color-l: var(--btn-default-fg-l);
   --btn-default-border-color: hsl(var(--btn-default-border-color-h), var(--btn-default-border-color-s), var(--btn-default-border-color-l));
 
-  /* success colors */
-  --btn-success-fg-h: var(--btn-primary-fg-h);
-  --btn-success-fg-s: var(--btn-primary-fg-s);
-  --btn-success-fg-l: var(--btn-primary-fg-l);
-  --btn-success-fg: hsl(var(--btn-success-fg-h), var(--btn-success-fg-s), var(--btn-success-fg-l));
-
-  --btn-success-bg-h: var(--btn-primary-bg-h);
-  --btn-success-bg-s: var(--btn-primary-bg-s);
-  --btn-success-bg-l: var(--btn-primary-bg-l);
-  --btn-success-bg: hsl(var(--btn-success-bg-h), var(--btn-success-bg-s), var(--btn-success-bg-l));
-
-  --btn-success-border-color-h: var(--btn-success-bg-h);
-  --btn-success-border-color-s: var(--btn-success-bg-s);
-  --btn-success-border-color-l: var(--btn-success-bg-l);
-  --btn-success-border-color: hsl(var(--btn-success-border-color-h), var(--btn-success-border-color-s), var(--btn-success-border-color-l));
-
   /* info colors */
   --btn-info-fg-h: var(--btn-default-fg-h);
   --btn-info-fg-s: var(--btn-default-fg-s);
