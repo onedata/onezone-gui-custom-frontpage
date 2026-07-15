@@ -65,18 +65,18 @@ class CustomFrontpageMock {
             displayName: 'username & password',
           },
           // Uncomment below to test the "eoscpl" template (also comment-out the google)
-          {
-            id: 'accessEoscPl',
-            iconPath: `https://data.eosc.pl/ozw/onezone/custom/eoscpl.svg`,
-            iconBackgroundColor: '#FFFFFF',
-            displayName: 'federated AAI',
-          },
           // {
-          //   id: 'google',
-          //   iconPath: `${imagesOrigin}/ozw/onezone/assets/images/auth-providers/google.svg`,
+          //   id: 'accessEoscPl',
+          //   iconPath: `https://data.eosc.pl/ozw/onezone/custom/eoscpl.svg`,
           //   iconBackgroundColor: '#FFFFFF',
-          //   displayName: 'Google',
+          //   displayName: 'federated AAI',
           // },
+          {
+            id: 'google',
+            iconPath: `${imagesOrigin}/ozw/onezone/assets/images/auth-providers/google.svg`,
+            iconBackgroundColor: '#FFFFFF',
+            displayName: 'Google',
+          },
         ],
         loginMessage: '<p>Mollit fugiat laboris do qui esse culpa eiusmod nostrud occaecat tempor officia eu occaecat nostrud.</p><p>Irure id veniam velit sunt adipisicing reprehenderit irure esse ea qui eiusmod.</p>',
         isAuthenticationError: false,
