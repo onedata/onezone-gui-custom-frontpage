@@ -4,19 +4,22 @@ const spiceRed = '#00aeef';
 const customizerData = {
   /** @type {HTMLElement} */
   basicAuthButton: null,
+  /** @type {HTMLElement} */
+  spiceKeycloakButton: null,
 };
 const buttonLabels = {
   basicAuth: 'Sign-in with username',
+  spice_keycloak: 'Sign-in with SPICE Platform',
 };
 function getButtonAuthId(button) {
-  for (const possibleId of ['basicAuth']) {
+  for (const possibleId of ['basicAuth', 'spice_keycloak']) {
     if (button.classList.contains(possibleId)) {
       return possibleId;
     }
   }
 }
 function customizeFrontpage() {
-  const { basicAuthButton } = customizerData;
+  const { basicAuthButton, spiceKeycloakButton } = customizerData;
   const buttonsContainer = document.querySelector('#login-buttons-container');
   
   // force button colors
@@ -29,7 +32,12 @@ function customizeFrontpage() {
   const basicAuthIcon = basicAuthButton.querySelector('.auth-icon-image');
   basicAuthIcon.style.backgroundImage =
     'url(./assets/basicauth.svg?rev=1761214007910)';
-  
+  /** @type {HTMLElement} */
+  const spiceKeycloakIcon = spiceKeycloakButton.querySelector('.auth-icon-image');
+  spiceKeycloakIcon.style.backgroundImage =
+    'url(./assets/spice-keycloak.svg?rev=1784893096240)';
+
+
   // remover tip and apply button labels
   for (const button of buttonsContainer.querySelectorAll('.login-icon-box')) {
     const label = buttonLabels[getButtonAuthId(button)] || button.ariaLabel;
@@ -48,7 +56,8 @@ function customizeFrontpage() {
 }
 const checkButtonsInterval = setInterval(() => {
   customizerData.basicAuthButton = document.querySelector('.login-icon-box.basicAuth');
-  if (customizerData.basicAuthButton) {
+  customizerData.spiceKeycloakButton = document.querySelector('.login-icon-box.spice_keycloak');
+  if (customizerData.basicAuthButton && customizerData.spiceKeycloakButton) {
     clearInterval(checkButtonsInterval);
     customizeFrontpage();
   }
