@@ -158,7 +158,7 @@ button.loading .button-spinner {
 .button-spinner {
   /* hidden by default - use button.loading class to show */
   display: none;
-  background-image: url('./assets/spinner.svg?rev=1');
+  background-image: url('./assets/spinner.svg?rev=1784895555005');
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -262,15 +262,8 @@ button.loading .button-spinner {
 }
 
 /* specific button styles, as the DOM structure makes it hard to get horizontal center */
-.spice-frontpage .spice .auth-icon-image {
+.spice-frontpage .auth-icon-image {
   padding-left: 94px;
-  background-position-x: 26px;
-}
-.spice-frontpage .spice .login-icon-spinner {
-  background-position-x: 30px;
-}
-.spice-frontpage .basicAuth .auth-icon-image {
-  background-position-x: 30px;
 }
 
 @media (max-width: 460px) {
@@ -278,9 +271,6 @@ button.loading .button-spinner {
     font-size: 1.05em;
     background-size: 44px;
     background-position-x: 22px;
-    padding-left: 84px;
-  }
-  .spice-frontpage .spice .auth-icon-image {
     padding-left: 84px;
   }
   .spice-frontpage .basicAuth .auth-icon-image {
@@ -295,7 +285,7 @@ button.loading .button-spinner {
 }
 
 .login-icon-spinner {
-  background-image: url('./assets/spinner.svg?rev=1733387933368');
+  background-image: url('./assets/spinner.svg?rev=1784895555005');
   width: calc(100% - 10px);
   height: calc(100% - 10px);
   background-position-y: center;
@@ -303,6 +293,10 @@ button.loading .button-spinner {
   background-size: 36px;
   background-repeat: no-repeat;
   margin: 5px;
+}
+
+#login-form-sign-in-btn .button-spinner {
+  background-image: url('./assets/spinner-light.svg?rev=1784896016892');
 }
 
 .login-footer {
