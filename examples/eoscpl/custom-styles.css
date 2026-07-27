@@ -202,11 +202,6 @@
 }
 
 /* Override style - by default button color changes on hover */
-.btn.btn-primary:hover {
-  background-color: var(--color-eosc-pacific-cyan-darker);
-  border-color: var(--color-eosc-pacific-cyan-darker);
-}
-
 .btn.btn-default:hover {
   background-color: var(--color-eosc-light-blue);
   border-color: var(--color-eosc-pacific-cyan-darker);
@@ -214,6 +209,11 @@
 
 .btn.btn-default:focus {
   background-color: var(--color-eosc-light-blue);
+}
+
+.btn.btn-primary:hover {
+  background-color: var(--color-eosc-pacific-cyan-darker);
+  border-color: var(--color-eosc-pacific-cyan-darker);
 }
 
 .btn.btn-danger:hover, .btn.btn-danger:focus {
