@@ -19,6 +19,17 @@
   /* Logo */
   --onedata-logo-height: 40px;
   --onedata-logo-margin-bottom: 24px;
+
+  /* Links colors */
+  --link-color-h: var(--color-eosc-pacific-cyan-h);
+  --link-color-s: var(--color-eosc-pacific-cyan-s);
+  --link-color-l: var(--color-eosc-pacific-cyan-l);
+  --link-color: hsl(var(--link-color-h), var(--link-color-s), var(--link-color-l));
+
+  /* Border radius */
+  --border-radius-base: 8px;
+  --border-radius-large: 12px;
+  --border-radius-small: 6px;
 }
 
 .one-animated-logo {
