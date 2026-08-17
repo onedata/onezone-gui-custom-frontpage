@@ -3,6 +3,7 @@
   --color-eosc-pacific-cyan-h: 186;
   --color-eosc-pacific-cyan-s: 84%;
   --color-eosc-pacific-cyan-l: 35%;
+  --color-eosc-pacific-cyan: hsl(var(--color-eosc-pacific-cyan-h), var(--color-eosc-pacific-cyan-s), var(--color-eosc-pacific-cyan-l));
 
   --sidebar-primary-color-h: var(--color-eosc-pacific-cyan-h);
   --sidebar-primary-color-s: var(--color-eosc-pacific-cyan-s);
@@ -30,6 +31,28 @@
   --border-radius-base: 8px;
   --border-radius-large: 12px;
   --border-radius-small: 6px;
+
+  /* Navigation tabs colors */
+  --color-nav-tabs-h: var(--color-eosc-pacific-cyan-h);
+  --color-nav-tabs-s: var(--color-eosc-pacific-cyan-s);
+  --color-nav-tabs-l: var(--color-eosc-pacific-cyan-l);
+  --color-nav-tabs: hsl(var(--color-nav-tabs-h), var(--color-nav-tabs-s), var(--color-nav-tabs-l));
+
+  --color-eosc-pacific-cyan-darker-h: var(--color-eosc-pacific-cyan-h);
+  --color-eosc-pacific-cyan-darker-s: 97%;
+  --color-eosc-pacific-cyan-darker-l: 14%;
+  --color-eosc-pacific-cyan-darker: hsl(var(--color-eosc-pacific-cyan-darker-h), var(--color-eosc-pacific-cyan-darker-s), var(--color-eosc-pacific-cyan-darker-l));
+  --color-nav-tabs-hover: var(--color-eosc-pacific-cyan-darker);
+
+  --toggle-bg-color-checked-h: var(--color-eosc-pacific-cyan-h);
+  --toggle-bg-color-checked-s: var(--color-eosc-pacific-cyan-s);
+  --toggle-bg-color-checked-l: var(--color-eosc-pacific-cyan-l);
+  --toggle-bg-color-checked: var(--color-eosc-pacific-cyan);
+
+  --one-checkbox-color-h: var(--color-eosc-pacific-cyan-h);
+  --one-checkbox-color-s: var(--color-eosc-pacific-cyan-s);
+  --one-checkbox-color-l: var(--color-eosc-pacific-cyan-l);
+  --one-checkbox-color: var(--color-eosc-pacific-cyan);
 }
 
 .one-animated-logo {
