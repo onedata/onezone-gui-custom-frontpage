@@ -219,7 +219,7 @@
   border-color: var(--color-eosc-pacific-cyan-darker);
 }
 
-.btn.btn-danger:hover, .btn.btn-danger:focus {
+.btn.btn-danger:hover, .btn.btn-danger:focus, .btn.btn-danger:active:focus {
   --btn-danger-bg-darker: hsl(var(--btn-danger-bg-h), var(--btn-danger-bg-s), calc(var(--btn-danger-bg-l) - 10%));
   background-color: var(--btn-danger-bg-darker);
   border-color: var(--btn-danger-bg-darker);
