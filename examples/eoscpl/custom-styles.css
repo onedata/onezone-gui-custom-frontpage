@@ -52,9 +52,13 @@
   --sidebar-primary-color-s: var(--color-eosc-pacific-cyan-lighter-s);
   --sidebar-primary-color-l: var(--color-eosc-pacific-cyan-lighter-l);
 
-  --sidebar-secondary-color-h: var(--color-eosc-pacific-cyan-h);
-  --sidebar-secondary-color-s: var(--color-eosc-pacific-cyan-s);
-  --sidebar-secondary-color-l: var(--color-eosc-pacific-cyan-l);
+  --sidebar-secondary-color-h: var(--color-eosc-pacific-cyan-lighter-h);
+  --sidebar-secondary-color-s: var(--color-eosc-pacific-cyan-lighter-s);
+  --sidebar-secondary-color-l: var(--color-eosc-pacific-cyan-lighter-l);
+
+  --sidebar-button-color-h: var(--color-eosc-pacific-cyan-h);
+  --sidebar-button-color-s: var(--color-eosc-pacific-cyan-s);
+  --sidebar-button-color-l: var(--color-eosc-pacific-cyan-l);
 
   --sidebar-upload-color-h: var(--color-eosc-pacific-cyan-lighter-h);
   --sidebar-upload-color-s: 65%;
@@ -256,14 +260,19 @@
   color: var(--btn-primary-fg);
 }
 
+.btn-group .btn.btn-default:is(:hover, :focus, :not(.active):hover) {
+  background-color: var(--color-eosc-light-blue);
+}
+
+.btn-group .btn.btn-default:not(.active):hover {
+  color: #555555;
+  border-color: #d6d6d6;
+}
+
 .btn-group .btn.btn-default.active:focus {
   background-color: var(--btn-primary-bg);
 }
 
 .btn-group .btn.btn-default.active:hover {
   background-color: var(--color-eosc-pacific-cyan-darker);
-}
-
-.btn-group .btn.btn-default:is(:hover, :focus, :not(.active):hover) {
-  background-color: var(--color-eosc-light-blue);
 }
