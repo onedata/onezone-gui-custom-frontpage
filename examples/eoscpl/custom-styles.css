@@ -203,7 +203,7 @@
   pointer-events: none;
 }
 
-/* Override more specific focus styles defined for primary and danger buttons. */
+/* Override more specific focus styles defined for buttons. */
 .btn:focus,
 .btn.btn-primary:focus,
 .btn.btn-danger:focus,
