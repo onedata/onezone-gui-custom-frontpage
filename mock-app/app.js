@@ -77,6 +77,13 @@ class CustomFrontpageMock {
             iconBackgroundColor: '#FFFFFF',
             displayName: 'Google',
           },
+          // Uncomment below to test the "spice" template (also comment-out the google)
+          // {
+          //   id: 'spice_keycloak',
+          //   iconPath: `${imagesOrigin}/ozw/onezone/assets/images/auth-providers/keycloak.svg`,
+          //   iconBackgroundColor: '#FFFFFF',
+          //   displayName: 'SPICE Platform',
+          // },
         ],
         loginMessage: '<p>Mollit fugiat laboris do qui esse culpa eiusmod nostrud occaecat tempor officia eu occaecat nostrud.</p><p>Irure id veniam velit sunt adipisicing reprehenderit irure esse ea qui eiusmod.</p>',
         isAuthenticationError: false,
