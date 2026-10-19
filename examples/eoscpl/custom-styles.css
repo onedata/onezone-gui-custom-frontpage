@@ -90,12 +90,12 @@
   --toggle-bg-color-checked-h: var(--color-eosc-pacific-cyan-h);
   --toggle-bg-color-checked-s: var(--color-eosc-pacific-cyan-s);
   --toggle-bg-color-checked-l: var(--color-eosc-pacific-cyan-l);
-  --toggle-bg-color-checked: var(--color-eosc-pacific-cyan);
+  --toggle-bg-color-checked: hsl(var(--toggle-bg-color-checked-h), var(--toggle-bg-color-checked-s), var(--toggle-bg-color-checked-l));
 
   --one-checkbox-color-h: var(--color-eosc-pacific-cyan-h);
   --one-checkbox-color-s: var(--color-eosc-pacific-cyan-s);
   --one-checkbox-color-l: var(--color-eosc-pacific-cyan-l);
-  --one-checkbox-color: var(--color-eosc-pacific-cyan);
+  --one-checkbox-color: hsl(var(--one-checkbox-color-h), var(--one-checkbox-color-s), var(--one-checkbox-color-l));
 
   /* Buttons */
   /* primary colors */
@@ -265,4 +265,8 @@
 
 .btn-tooltip-container:active {
   box-shadow: none;
+}
+
+a:hover, .one-tile.one-tile-link:hover .more-link {
+  color: hsl(var(--link-color-h), var(--link-color-s), calc(var(--link-color-l) - 5%));
 }
