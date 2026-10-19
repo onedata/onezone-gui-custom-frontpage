@@ -147,6 +147,12 @@
   --one-pill-button-default-fg-s: var(--btn-primary-color-s);
   --one-pill-button-default-fg-l: var(--btn-primary-color-l);
   --one-pill-button-default-fg: hsl(var(--one-pill-button-default-fg-h), var(--one-pill-button-default-fg-s), var(--one-pill-button-default-fg-l));
+
+  /* Tags Input Button */
+  --one-tags-input-button-color-h: var(--color-eosc-pacific-cyan-h);
+  --one-tags-input-button-color-s: var(--color-eosc-pacific-cyan-s);
+  --one-tags-input-button-color-l: var(--color-eosc-pacific-cyan-l);
+  --one-tags-input-button-color: hsl(var(--one-tags-input-button-color-h), var(--one-tags-input-button-color-s), var(--one-tags-input-button-color-l));
 }
 
 /* Styles for logo */
