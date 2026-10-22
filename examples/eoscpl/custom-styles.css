@@ -3,6 +3,7 @@
   --color-eosc-pacific-cyan-h: 186;
   --color-eosc-pacific-cyan-s: 56%;
   --color-eosc-pacific-cyan-l: 33%;
+  --color-eosc-pacific-cyan: hsl(var(--color-eosc-pacific-cyan-h), var(--color-eosc-pacific-cyan-s), var(--color-eosc-pacific-cyan-l));
 
   --color-eosc-pacific-cyan-lighter-h: var(--color-eosc-pacific-cyan-h);
   --color-eosc-pacific-cyan-lighter-s: 84%;
@@ -64,38 +65,30 @@
   --onedata-logo-height: 40px;
   --onedata-logo-margin-bottom: 24px;
 
-  /* Links colors */
+  /* Links */
   --link-color-h: var(--color-eosc-pacific-cyan-h);
   --link-color-s: var(--color-eosc-pacific-cyan-s);
   --link-color-l: var(--color-eosc-pacific-cyan-l);
-  --link-color: hsl(var(--link-color-h), var(--link-color-s), var(--link-color-l));
 
   /* Border radius */
   --border-radius-base: 8px;
   --border-radius-large: 12px;
   --border-radius-small: 6px;
 
-  /* Navigation tabs colors */
+  /* Navigation tabs */
   --color-nav-tabs-h: var(--color-eosc-pacific-cyan-h);
   --color-nav-tabs-s: var(--color-eosc-pacific-cyan-s);
   --color-nav-tabs-l: var(--color-eosc-pacific-cyan-l);
-  --color-nav-tabs: hsl(var(--color-nav-tabs-h), var(--color-nav-tabs-s), var(--color-nav-tabs-l));
 
-  --color-eosc-pacific-cyan-darker-h: var(--color-eosc-pacific-cyan-h);
-  --color-eosc-pacific-cyan-darker-s: 97%;
-  --color-eosc-pacific-cyan-darker-l: 14%;
-  --color-eosc-pacific-cyan-darker: hsl(var(--color-eosc-pacific-cyan-darker-h), var(--color-eosc-pacific-cyan-darker-s), var(--color-eosc-pacific-cyan-darker-l));
   --color-nav-tabs-hover: var(--color-eosc-pacific-cyan-darker);
 
   --toggle-bg-color-checked-h: var(--color-eosc-pacific-cyan-h);
   --toggle-bg-color-checked-s: var(--color-eosc-pacific-cyan-s);
   --toggle-bg-color-checked-l: var(--color-eosc-pacific-cyan-l);
-  --toggle-bg-color-checked: hsl(var(--toggle-bg-color-checked-h), var(--toggle-bg-color-checked-s), var(--toggle-bg-color-checked-l));
 
   --one-checkbox-color-h: var(--color-eosc-pacific-cyan-h);
   --one-checkbox-color-s: var(--color-eosc-pacific-cyan-s);
   --one-checkbox-color-l: var(--color-eosc-pacific-cyan-l);
-  --one-checkbox-color: hsl(var(--one-checkbox-color-h), var(--one-checkbox-color-s), var(--one-checkbox-color-l));
 
   /* Buttons */
   /* primary colors */
@@ -152,7 +145,9 @@
   --one-tags-input-button-color-h: var(--color-eosc-pacific-cyan-h);
   --one-tags-input-button-color-s: var(--color-eosc-pacific-cyan-s);
   --one-tags-input-button-color-l: var(--color-eosc-pacific-cyan-l);
-  --one-tags-input-button-color: hsl(var(--one-tags-input-button-color-h), var(--one-tags-input-button-color-s), var(--one-tags-input-button-color-l));
+
+  /* Input border focus */
+  --input-border-focus: var(--color-eosc-pacific-cyan);
 }
 
 /* Styles for logo */
@@ -275,4 +270,8 @@
 
 a:hover, .one-tile.one-tile-link:hover .more-link {
   color: hsl(var(--link-color-h), var(--link-color-s), calc(var(--link-color-l) - 5%));
+}
+
+.linked-account .login-icon-box.add {
+  color: var(--btn-primary-bg);
 }
