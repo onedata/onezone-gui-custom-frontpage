@@ -69,7 +69,6 @@
   --link-color-h: var(--color-eosc-pacific-cyan-lighter-h);
   --link-color-s: var(--color-eosc-pacific-cyan-lighter-s);
   --link-color-l: var(--color-eosc-pacific-cyan-lighter-l);
-  --link-hover-color: hsl(var(--link-color-h), var(--link-color-s), calc(var(--link-color-l) - 10%));
 
   /* Border radius */
   --border-radius-base: 8px;
