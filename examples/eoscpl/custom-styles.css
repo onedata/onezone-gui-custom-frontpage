@@ -138,9 +138,9 @@
   --one-pill-button-default-bg-l: var(--btn-primary-bg-l);
   --one-pill-button-default-bg: hsl(var(--one-pill-button-default-bg-h), var(--one-pill-button-default-bg-s), var(--one-pill-button-default-bg-l));
 
-  --one-pill-button-default-fg-h: var(--btn-primary-color-h);
-  --one-pill-button-default-fg-s: var(--btn-primary-color-s);
-  --one-pill-button-default-fg-l: var(--btn-primary-color-l);
+  --one-pill-button-default-fg-h: var(--btn-primary-fg-h);
+  --one-pill-button-default-fg-s: var(--btn-primary-fg-s);
+  --one-pill-button-default-fg-l: var(--btn-primary-fg-l);
   --one-pill-button-default-fg: hsl(var(--one-pill-button-default-fg-h), var(--one-pill-button-default-fg-s), var(--one-pill-button-default-fg-l));
 
   /* Tags Input Button */
