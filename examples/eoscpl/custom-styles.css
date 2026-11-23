@@ -80,7 +80,7 @@
   --border-radius-small: 6px;
   --btn-border-radius-base: 64px;
   --btn-border-radius-large: 64px;
-  --btn-border-radius-small: 64px;
+  --btn-border-radius-small: 16px;
   --btn-border-width: 1px;
 
   /* Navigation tabs */
