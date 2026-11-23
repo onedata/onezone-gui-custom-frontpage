@@ -254,11 +254,11 @@
   color: var(--btn-primary-fg);
 }
 
-.btn-group .btn.btn-default:is(:hover, :focus, :not(.active):hover) {
+.btn-group .btn.btn-default:is(:hover, :not(.active):focus) {
   background-color: var(--color-eosc-light-blue);
 }
 
-.btn-group .btn.btn-default.active:focus,
+.btn-group .btn.btn-default.active:focus-visible,
 .btn-group .btn.btn-default.active:hover {
   background-color: var(--color-eosc-pacific-cyan-darker);
   border-color: var(--color-eosc-pacific-cyan-darker);
