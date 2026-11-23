@@ -78,6 +78,10 @@
   --border-radius-base: 8px;
   --border-radius-large: 12px;
   --border-radius-small: 6px;
+  --btn-border-radius-base: 64px;
+  --btn-border-radius-large: 64px;
+  --btn-border-radius-small: 64px;
+  --btn-border-width: 1px;
 
   /* Navigation tabs */
   --color-nav-tabs-h: var(--color-eosc-pacific-cyan-h);
@@ -203,12 +207,6 @@
 
 .main-menu-column .powered-by-container {
   visibility: visible;
-}
-
-/* Styles for buttons */
-.btn, a.btn {
-  border-radius: 64px;
-  border-width: 1px;
 }
 
 .btn:focus-visible::before {
