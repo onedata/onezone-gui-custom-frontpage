@@ -3,6 +3,7 @@
   --color-eosc-pacific-cyan-h: 186;
   --color-eosc-pacific-cyan-s: 56%;
   --color-eosc-pacific-cyan-l: 33%;
+  --color-eosc-pacific-cyan: hsl(var(--color-eosc-pacific-cyan-h), var(--color-eosc-pacific-cyan-s), var(--color-eosc-pacific-cyan-l));
 
   --color-eosc-pacific-cyan-lighter-h: var(--color-eosc-pacific-cyan-h);
   --color-eosc-pacific-cyan-lighter-s: 84%;
@@ -64,7 +65,41 @@
   --onedata-logo-height: 40px;
   --onedata-logo-margin-bottom: 24px;
 
+  /* Links */
+  --action-link-color-h: var(--color-eosc-pacific-cyan-lighter-h);
+  --action-link-color-s: var(--color-eosc-pacific-cyan-lighter-s);
+  --action-link-color-l: var(--color-eosc-pacific-cyan-lighter-l);
+
+  --navigation-link-color-h: var(--action-link-color-h);
+  --navigation-link-color-s: var(--action-link-color-s);
+  --navigation-link-color-l: var(--action-link-color-l);
+
+  /* Generic border radius */
+  --border-radius-base: 8px;
+  --border-radius-large: 12px;
+  --border-radius-small: 6px;
+
+  /* Navigation tabs */
+  --color-nav-tabs-h: var(--color-eosc-pacific-cyan-h);
+  --color-nav-tabs-s: var(--color-eosc-pacific-cyan-s);
+  --color-nav-tabs-l: var(--color-eosc-pacific-cyan-l);
+
+  --toggle-bg-color-checked-h: var(--color-eosc-pacific-cyan-h);
+  --toggle-bg-color-checked-s: var(--color-eosc-pacific-cyan-s);
+  --toggle-bg-color-checked-l: var(--color-eosc-pacific-cyan-l);
+
+  --one-checkbox-color-h: var(--color-eosc-pacific-cyan-h);
+  --one-checkbox-color-s: var(--color-eosc-pacific-cyan-s);
+  --one-checkbox-color-l: var(--color-eosc-pacific-cyan-l);
+
   /* Buttons */
+
+  /* shape */
+  --btn-border-width: 1px;
+  --btn-border-radius-base: 64px;
+  --btn-border-radius-large: 64px;
+  --btn-border-radius-small: 16px;
+
   /* primary colors */
   --btn-primary-fg-h: var(--color-eosc-white-h);
   --btn-primary-fg-s: var(--color-eosc-white-s);
@@ -97,22 +132,6 @@
   --btn-default-border-color-l: var(--btn-default-fg-l);
   --btn-default-border-color: hsl(var(--btn-default-border-color-h), var(--btn-default-border-color-s), var(--btn-default-border-color-l));
 
-  /* info colors */
-  --btn-info-fg-h: var(--btn-default-fg-h);
-  --btn-info-fg-s: var(--btn-default-fg-s);
-  --btn-info-fg-l: var(--btn-default-fg-l);
-  --btn-info-fg: hsl(var(--btn-info-fg-h), var(--btn-info-fg-s), var(--btn-info-fg-l));
-
-  --btn-info-bg-h: var(--btn-default-bg-h);
-  --btn-info-bg-s: var(--btn-default-bg-s);
-  --btn-info-bg-l: var(--btn-default-bg-l);
-  --btn-info-bg: hsl(var(--btn-info-bg-h), var(--btn-info-bg-s), var(--btn-info-bg-l));
-
-  --btn-info-border-color-h: var(--btn-info-fg-h);
-  --btn-info-border-color-s: var(--btn-info-fg-s);
-  --btn-info-border-color-l:  var(--btn-info-fg-l);
-  --btn-info-border-color: hsl(var(--btn-info-border-color-h), var(--btn-info-border-color-s), var(--btn-info-border-color-l));
-
   /* One Pill Button */
   --one-pill-button-border-width: 1px;
 
@@ -126,10 +145,18 @@
   --one-pill-button-default-bg-l: var(--btn-primary-bg-l);
   --one-pill-button-default-bg: hsl(var(--one-pill-button-default-bg-h), var(--one-pill-button-default-bg-s), var(--one-pill-button-default-bg-l));
 
-  --one-pill-button-default-fg-h: var(--btn-primary-color-h);
-  --one-pill-button-default-fg-s: var(--btn-primary-color-s);
-  --one-pill-button-default-fg-l: var(--btn-primary-color-l);
+  --one-pill-button-default-fg-h: var(--btn-primary-fg-h);
+  --one-pill-button-default-fg-s: var(--btn-primary-fg-s);
+  --one-pill-button-default-fg-l: var(--btn-primary-fg-l);
   --one-pill-button-default-fg: hsl(var(--one-pill-button-default-fg-h), var(--one-pill-button-default-fg-s), var(--one-pill-button-default-fg-l));
+
+  /* Tags Input Button */
+  --one-tags-input-button-color-h: var(--color-eosc-pacific-cyan-h);
+  --one-tags-input-button-color-s: var(--color-eosc-pacific-cyan-s);
+  --one-tags-input-button-color-l: var(--color-eosc-pacific-cyan-l);
+
+  /* Input border focus */
+  --input-border-focus: var(--color-eosc-pacific-cyan);
 }
 
 /* Styles for logo */
@@ -185,12 +212,6 @@
   visibility: visible;
 }
 
-/* Styles for buttons */
-.btn, a.btn {
-  border-radius: 64px;
-  border-width: 1px;
-}
-
 .btn:focus-visible::before {
   content: '';
   position: absolute;
@@ -219,16 +240,7 @@
   border-color: var(--btn-danger-bg-darker);
 }
 
-.btn.btn-info:hover {
-  background-color: var(--color-eosc-light-blue);
-  border-color: var(--color-eosc-pacific-cyan-darker);
-}
-
-.btn.btn-info:focus {
-  background-color: var(--color-eosc-light-blue);
-}
-
-.btn:is(.btn-default, .btn-primary, .btn-info, .btn-warning, .btn-danger):is(
+.btn:is(.btn-default, .btn-primary, .btn-warning, .btn-danger):is(
   [disabled],
   [disabled]:hover,
   [disabled]:focus-visible
@@ -245,11 +257,11 @@
   color: var(--btn-primary-fg);
 }
 
-.btn-group .btn.btn-default:is(:hover, :focus, :not(.active):hover) {
+.btn-group .btn.btn-default:is(:hover, :not(.active):focus) {
   background-color: var(--color-eosc-light-blue);
 }
 
-.btn-group .btn.btn-default.active:focus,
+.btn-group .btn.btn-default.active:focus-visible,
 .btn-group .btn.btn-default.active:hover {
   background-color: var(--color-eosc-pacific-cyan-darker);
   border-color: var(--color-eosc-pacific-cyan-darker);
